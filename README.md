@@ -3,3 +3,6 @@ Project requirements:
 1. 16 * 16 grid layout
 2. Popup asking for grid size
     - set max limit to 100
+
+Fix list:
+1. need error handling for btn input 
