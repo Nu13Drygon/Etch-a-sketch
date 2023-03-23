@@ -1,8 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
 html {
     box-sizing: border-box;
+    height: 100%;
 }
 *, *::before, *::after {
     box-sizing: inherit;
+}
+
+body {
+    background-image: linear-gradient(to right, rgb(255, 0, 8), rgb(149, 0, 255));
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Edu NSW ACT Foundation', cursive;
 }
 
 #grid-container {
@@ -11,6 +25,8 @@ html {
     flex-direction: column;
     width: 400px;
     height: 400px;
+    margin: 0 auto;
+    margin-bottom: 10px;
 }
 
 .grid-item {
@@ -22,3 +38,19 @@ html {
 .grid-color {
     background-color: black;
 }
+
+.controls {
+    display: flex;
+    justify-content: center;
+}
+
+#change-grid-btn {
+    margin-top: 20px;
+    transform: scale(1.5);
+    border-radius: 5px;
+    border: 1px none black;
+    font-family: 'Kanit', sans-serif;
+    background: linear-gradient(to left, rgb(255, 0, 8), rgb(149, 0, 255));
+}
+
+
