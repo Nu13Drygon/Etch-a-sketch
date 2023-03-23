@@ -5,4 +5,4 @@ Project requirements:
     - set max limit to 100
 
 Fix list:
-~~ 1. need error handling for btn input ~~
+none
