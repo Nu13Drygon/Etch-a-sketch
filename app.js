@@ -1,5 +1,7 @@
 const gridContainer = document.getElementById("grid-container")
 const gridChangeBtn = document.getElementById("change-grid-btn")
+const rgbBtn = document.getElementById("rgb-btn")
+let rgbMode = false
 let gridDimensions = 256
 
 
@@ -18,10 +20,15 @@ function createGrid(gridDimensions) {
 }
 
 function colorGridItem(gridItem) {
-    gridItem.classList.add("grid-color")
+    if(rgbMode) {
+        gridItem.style.backgroundColor = createRandomRGBvalue()
+    }
+    else {
+        gridItem.style.backgroundColor = "black"
+    }
 }
 
-// grid button functionality
+// grid Dimensions button functionality
 gridChangeBtn.addEventListener('click', () => {
     let gridPromptAmount = parseInt(prompt("Enter grid amount (max-limit: 100)"))
     let checkedGridPromptAmount = checkGridPromptAmount(gridPromptAmount)
@@ -61,5 +68,19 @@ function checkGridPromptAmount(changeGridPrompt) {
         return promptInputAmount
     }
 }
+
+// RGB color btn
+rgbBtn.addEventListener('click', () => {
+    rgbMode = !rgbMode
+})
+
+function createRandomRGBvalue() {
+    let r = Math.floor(Math.random() * 256)
+    let g = Math.floor(Math.random() * 256)
+    let b = Math.floor(Math.random() * 256)
+    return `rgb(${r}, ${g}, ${b})`
+}
+
+
 
 
