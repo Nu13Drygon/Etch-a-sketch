@@ -87,16 +87,16 @@ function createRandomRGBvalue() {
 
 //Grid mode toggle btn
 gridBtn.addEventListener('click', () => {
-    let gridProperty = document.getElementsByClassName("grid-item")
-    gridMode = !gridMode
+    let gridProperty = document.getElementsByClassName("grid-item");
+    gridMode = !gridMode;
     if(gridMode) {
         for (let i = 0; i < gridProperty.length; i++) {
-            gridProperty[i].style.border = "1px none black"
+            gridProperty[i].style.border = "1px none black";
         }
     }
     else {
         for (let i = 0; i < gridProperty.length; i++) {
-            gridProperty[i].style.border = "1px solid rgba(47, 46, 46, 0.365)"
+            gridProperty[i].style.border = "1px solid rgba(47, 46, 46, 0.365)";
         }
     }
 })
