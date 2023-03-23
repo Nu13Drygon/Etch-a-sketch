@@ -31,7 +31,7 @@ gridChangeBtn.addEventListener('click', () => {
     let newGridItemSize = 400 / checkedGridPromptAmount
     removeAllChildNodes(gridContainer)
     createGrid(newGridDimensions)
-    setGridItemStyles(newGridItemSize)
+    setGridItemDimensions(newGridItemSize)
 })
 
 function removeAllChildNodes(parent) {
@@ -40,7 +40,7 @@ function removeAllChildNodes(parent) {
     }
 }
 
-function setGridItemStyles(newGridItemSize) {
+function setGridItemDimensions(newGridItemSize) {
     let gridItems = document.querySelectorAll('.grid-item')
     gridItems.forEach(item => {
         item.style.width = `${newGridItemSize}px`
